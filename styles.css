@@ -1,4 +1,30 @@
+body {
+    background-color: #f0f0f0; /* Cor de fundo cinza claro */
+    color: #333; /* Cor do texto cinza escuro */
+}
 .container {
     text-align: center;
     margin-top: 100px;
+    background-color: #fff; /* Cor de fundo branca para o container */
+    border: 1px solid #ccc; /* Borda cinza */
+    padding: 20px;
+}
+body {
+    
+    background-image: url('https://images.app.goo.gl/HYFKKbKgU6P6UuEX7')
+    background-size: cover;
+    background-position: center;
+}
+#contagemRegressiva {
+    font-size: 48px;
+    font-weight: bold;
+    color: #ff0000; /* Vermelho */
+    text-shadow: 2px 2px 4px #000;
+    animation: piscar 1s infinite;
+}
+
+@keyframes piscar {
+    0% { opacity: 1; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1; }
 }
