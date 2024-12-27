@@ -1,9 +1,8 @@
 function mostrarContagemRegressiva() {
     const contagemRegressivaElement = document.getElementById('contagemRegressiva');
-    const umAnoEmMilisegundos = 31536000000; // Aproximadamente um ano em milissegundos
-    const dataAnoNovo = new Date(new Date().getFullYear() + 1, 0, 1);
+    const dataAnoNovo = new Date(new Date().getFullYear() + 1, 0, 1); // Ajustar para o fuso horário se necessário
     const agora = new Date();
-    const tempoRestante = dataAnoNovo - agora;
+    let tempoRestante = dataAnoNovo - agora;
 
     const intervalo = setInterval(() => {
         const dias = Math.floor(tempoRestante / (1000 * 60 * 60 * 24));
@@ -16,7 +15,6 @@ function mostrarContagemRegressiva() {
         if (tempoRestante < 0) {
             clearInterval(interval);
             contagemRegressivaElement.textContent = 'Feliz Ano Novo!';
-            // Adicione aqui outros efeitos para o momento da virada, como fogos de artifício ou animações
         }
-    }, 1000);
+    }, 1000); // Atualiza a cada segundo
 }
